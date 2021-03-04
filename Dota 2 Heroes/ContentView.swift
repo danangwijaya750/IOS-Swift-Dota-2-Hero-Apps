@@ -18,6 +18,8 @@ struct Hero: Identifiable {
 struct RowHero: View {
     var hero: Hero
     var body: some View {
+        Image("logo").resizable().frame(width: 100, height: 100)
+            .padding().background(Color("accentColor"))
         Text("Name : \(hero.heroName)")
         Text("Type : \(hero.heroType)")
         Text("Role : \(hero.heroRole)")
@@ -33,5 +35,4 @@ struct ContentView: View {
             List(heroes){ hero in
                 RowHero(hero: hero)
         }
-}
-}
+}}
